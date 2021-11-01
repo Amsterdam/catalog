@@ -308,22 +308,6 @@
                 "licentie": "CC0"
             },
             {
-                "naam": "Topografie (BGT, KBK10, KBK50, Kaartteksten)",
-                "api_urls": {
-                    "Topgrafie": "https://map.data.amsterdam.nl/maps/topografie?REQUEST=GetCapabilities&VERSION=1.1.0&SERVICE=wms",
-                    "BGT WMS": "https://map.data.amsterdam.nl/maps/topografie?REQUEST=GetCapabilities&VERSION=1.1.0&SERVICE=wms",
-                    "KBK10 WMS": "https://map.data.amsterdam.nl/maps/bgt?REQUEST=GetCapabilities&VERSION=1.1.0&SERVICE=wms",
-                    "KBK50 WMS": "https://map.data.amsterdam.nl/maps/kbk50?REQUEST=GetCapabilities&VERSION=1.1.0&SERVICE=wms",
-                    "Kaartteksten WMS": "https://map.data.amsterdam.nl/maps/kaartteksten?REQUEST=GetCapabilities&VERSION=1.1.0&SERVICE=wms",
-                    "WFS": "https://map.data.amsterdam.nl/maps/bgtobjecten?REQUEST=GetCapabilities&SERVICE=wfs"
-                },
-                "specificatie_urls": {},
-                "documentatie_urls": {},
-                "beschikbaarheid": "Openbaar",
-                "beschrijving": null,
-                "licentie": "CC0"
-            },
-            {
                 "naam": "Tram & Metro Lijnen",
                 "api_urls": {
                     "WMS": "https://map.data.amsterdam.nl/maps/trm?REQUEST=GetCapabilities&VERSION=1.1.0&SERVICE=wms",
@@ -422,28 +406,58 @@
                 "licentie": "CC0"
             },
             {
-                "naam": "Topografie, vectortiles",
-                "api_urls": {
-                    "Tiles": "https://t1.data.amsterdam.nl/wm/12/2103/1345.pbf"
-                },
-                "specificatie_urls": {},
-                "documentatie_urls": {},
-                "beschrijving": "Vector,  coordinaten stelsel: Webmercator/Google (8-20)",
-                "beschikbaarheid": "Openbaar",
-                "licentie": "CC0"
-            },
-            {
                 "naam": "Luchtfoto (RD)",
                 "api_urls": {
                     "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
-                    "Tiles": "https://t1.data.amsterdam.nl/lufo2017_RD/12/1891/2161.jpeg"
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2021_RD/12/1891/2161.jpeg"
                 },
                 "specificatie_urls": {},
                 "documentatie_urls": {},
                 "beschrijving": "Raster,  coordinaten stelsel: Rijksdriehoekstelsel (5-16)",
                 "beschikbaarheid": "Openbaar",
                 "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto (WM)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2021_WM/18/134599/86112.png"
+                },
+                "specificatie_urls": {
+                    "TileJSON": "https://t1.data.amsterdam.nl/lufo2021_WM/tilejson.json"
+                },
+                "documentatie_urls": {},
+                "beschrijving": "Raster,  coordinaten stelsel: Webmercator/Google (11-21)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Infrarood (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/infrarood2021_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster,  coordinaten stelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Infrarood (WM)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/infrarood2021_WM/18/134599/86112.png"
+                },
+                "specificatie_urls": {
+                    "TileJSON": "https://t1.data.amsterdam.nl/infrarood2021_WM/tilejson.json"
+                },
+                "documentatie_urls": {},
+                "beschrijving": "Raster,  coordinaten stelsel: Webmercator/Google (11-21)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
             }
+
         ]
     }
 }

@@ -8,7 +8,7 @@
   },
   "copyFiles": [
     {
-      "from": "node_modules/swagger-ui/dist/**",
+      "from": "node_modules/swagger-ui-dist/**",
       "to": "static/swagger/"
     }
   ],
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/Amsterdam/catalog#readme",
   "dependencies": {
-    "swagger-ui": "^4.12.0"
+    "swagger-ui-dist": "^4.12.0"
   },
   "devDependencies": {
     "copy-files-from-to": "^3.2.2"

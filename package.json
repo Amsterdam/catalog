@@ -8,7 +8,10 @@
   },
   "copyFiles": [
     {
-      "from": "node_modules/swagger-ui-dist/**.{js,css,png,map,html}",
+      "from": [
+        "node_modules/swagger-ui-dist/**.{js,css,png,map,html}",
+        "!node_modules/swagger-ui-dist/swagger-initializer.js"
+      ],
       "to": "static/swagger/"
     }
   ],

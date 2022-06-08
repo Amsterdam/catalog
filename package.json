@@ -8,7 +8,7 @@
   },
   "copyFiles": [
     {
-      "from": "node_modules/swagger-ui-dist/**",
+      "from": "node_modules/swagger-ui-dist/**.{js,css,png,map,html}",
       "to": "static/swagger/"
     }
   ],

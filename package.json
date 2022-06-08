@@ -1,0 +1,32 @@
+{
+  "name": "catalog",
+  "version": "1.0.0",
+  "description": "List of DataPunt APIs along with browsable API, documentation and more.",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "copy-files-from-to"
+  },
+  "copyFiles": [
+    {
+      "from": "node_modules/swagger-ui/dist/**",
+      "to": "static/swagger/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amsterdam/catalog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amsterdam/catalog/issues"
+  },
+  "homepage": "https://github.com/Amsterdam/catalog#readme",
+  "dependencies": {
+    "swagger-ui": "^4.12.0"
+  },
+  "devDependencies": {
+    "copy-files-from-to": "^3.2.2"
+  }
+}

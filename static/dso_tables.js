@@ -45,7 +45,7 @@
  function parseDSOjson(json, table, api_name="Rest API") {
     for ( let name of Object.keys(json.datasets)) {
         let dataset = json.datasets[name];
-        if(dataset.status == "beschikbaar"){
+        if(dataset.status == "beschikbaar" && dataset.environments.length){
             row = {
                 "naam": dataset.service_name,
                 "beschrijving":dataset.description,

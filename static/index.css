@@ -4,7 +4,6 @@ html, body {
     padding: 0;
 }
 body {
-    font-family: "Avenir LT W01 55 Roman", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.25;
     color: #000;
@@ -20,7 +19,6 @@ h1 {
     margin: 20px 0 10px 20px;
     line-height: 26px;
     font-size: 26px;
-    font-family: "Avenir LT W01 85 Heavy", Arial, sans-serif;
     font-weight: normal;
 }
 h2 {
@@ -47,7 +45,6 @@ p {
     line-height: 50px;
     color: #000;
     margin-left: 85px;
-    font-family: "Avenir LT W01 85 Heavy", Arial, sans-serif;
     font-weight: normal;
 }
 .header a {
@@ -67,7 +64,6 @@ thead {
 }
 th {
     padding-left: 20px;
-    font-family: "Avenir LT W01 85 Heavy", Arial, sans-serif;
     font-weight: normal;
     border-bottom: 1px solid #000;
     border-top: 1px solid #000;

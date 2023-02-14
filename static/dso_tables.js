@@ -51,7 +51,6 @@
                 "beschrijving":dataset.description,
                 "api_urls": {},
                 "documentatie_urls": {"ReadTheDocs": dataset.environments[0].documentation_url},
-                "specificatie_urls": {"Swagger": "/api/swagger/?url=" + dataset.environments[0].specification_url},
                 "beschikbaarheid": dataset.terms_of_use.government_only?"Beperkt toegankelijk":"Openbaar",
                 "licentie": "CC0"
             };
@@ -89,24 +88,18 @@
             cell2_link.innerHTML += '<a href="' + api.api_urls[urlName] + '">' + urlName + '</a> ';
         }
 
-        // Specification column
-        let cell3_Spec = row.insertCell(2);
-        for ( let urlName of Object.keys(api.specificatie_urls)) {
-            cell3_Spec.innerHTML += '<a title="' + urlName + ' specificatie" href="' + api.specificatie_urls[urlName] + '">' + urlName + '</a> ';
-        }
-
         // Documentation column
-        let cell4_Docs = row.insertCell(3);
+        let cell4_Docs = row.insertCell(2);
         for ( let urlName of Object.keys(api.documentatie_urls)) {
             cell4_Docs.innerHTML = '<a title="' + urlName + ' documentatie" href="' + api.documentatie_urls[urlName] + '">' + urlName + '</a> ';
         }
 
         // Status column
-        let cell5_Status = row.insertCell(4);
+        let cell5_Status = row.insertCell(3);
         cell5_Status.innerHTML = api.beschikbaarheid;
 
         // License Column
-        let cell6_Licentie = row.insertCell(5);
+        let cell6_Licentie = row.insertCell(4);
         if(api.licentie == "CCBy4.0") {
             cell6_Licentie.innerHTML =
                 '<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">' +

@@ -144,3 +144,8 @@ td:hover .info-icon, .lock-icon:hover {
 .search-input {
     display: inline-block;
 }
+
+
+.legacy td:first-child, .legacy td:nth-child(2) {
+    text-decoration: line-through;
+}

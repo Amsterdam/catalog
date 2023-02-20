@@ -67,9 +67,16 @@
     let table = document.getElementById(tableId);
     let statusRow = document.getElementById(tableId+"-status");
 
-    data.forEach((api, i) => {
+    // Legacy API's last
+    sortedApis = data.sort((a,b) => a.hasOwnProperty("legacy"))
+    
+    sortedApis.forEach((api, i) => {
         let row = table.insertRow(-1);
         row.id = tableId + "-row-" + i;
+
+        if(api.legacy === true) {
+            row.className = "legacy"
+        }
 
         // Title column
         let cell1_Naam = row.insertCell(0);
@@ -97,6 +104,15 @@
         // Status column
         let cell5_Status = row.insertCell(3);
         cell5_Status.innerHTML = api.beschikbaarheid;
+
+        if(api.legacy === true) {
+            cell5_Status.innerHTML = "Legacy API <b>Niet gebruiken</b>, wordt <b>verwijderd</b>"
+            
+            if(api.replacedBy)  {
+                cell5_Status.innerHTML += " Vervangende API: <a href='" + api.replacedBy + "'>" + api.replacedBy + '</a> ';
+            }  
+            cell5_Status.innerHTML += " </br><a href=#legacy-info>Meer informatie</a>"
+        }
 
         // License Column
         let cell6_Licentie = row.insertCell(4);

@@ -184,9 +184,7 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy":"/v1/wfs/brk"
+                "licentie": "CC0"
             },
             {
                 "naam": "Bodem",
@@ -198,9 +196,7 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy":"/v1/wfs/bodem"
+                "licentie": "CC0"
             },
             {
                 "naam": "Gebieden",
@@ -212,9 +208,7 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy":"/v1/wfs/gebieden"
+                "licentie": "CC0"
             },
             {
                 "naam": "Handelsregister",
@@ -226,9 +220,7 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Alleen bereikbaar binnen de gemeente",
                 "beschrijving": null,
-                "licentie": "CCBy4.0",
-                "legacy":true,
-                "replacedBy":"/v1/wfs/handelsregister"
+                "licentie": "CCBy4.0"
             },
             {
                 "naam": "Luchtfoto's",
@@ -252,8 +244,7 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0",
-                "legacy": true
+                "licentie": "CC0"
             },
             {
                 "naam": "NAP",
@@ -265,9 +256,7 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy":"/v1/wfs/nap"
+                "licentie": "CC0"
             },
             {
                 "naam": "Panoramabeelden",
@@ -291,9 +280,7 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy":"/v1/wfs/geluidszones"
+                "licentie": "CC0"
             },
             {
                 "naam": "Planologische Zones Schiphol",
@@ -305,9 +292,7 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy":"/v1/wfs/geluidszones"
+                "licentie": "CC0"
             },
             {
                 "naam": "Reclame",
@@ -319,9 +304,7 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy":"/v1/wfs/belastingen"
+                "licentie": "CC0"
             },
             {
                 "naam": "Tellus",
@@ -345,9 +328,7 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy":"/v1/wfs/spoorlijnen"
+                "licentie": "CC0"
             },
             {
                 "naam": "Vuurwerkvrije zones",

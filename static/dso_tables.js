@@ -1,5 +1,6 @@
 /**
- * Fill the api table from "https://api.data.amsterdam.nl/v1/"
+ * Fill the api table from https://api.data.amsterdam.nl/v1/
+ * and https://map.data.amsterdam.nl/index.json.
  */
 
 const domain = window.location.origin;
@@ -39,6 +40,11 @@ let tables = {
 function parseMapIndex(mapidx) {
     let geo = tables["geo_services"];
     for (const [key, value] of Object.entries(mapidx)) {
+        let title = value.title || "";
+        let displayTitle = title + (
+            title.toLowerCase().includes(key) ? "" : " (" + key + ")"
+        );
+
         geo.push({
             "api_urls": {
                 "WFS": mapDomain + "/maps/" + key + "?REQUEST=GetCapabilities&SERVICE=wfs",
@@ -48,7 +54,7 @@ function parseMapIndex(mapidx) {
             "beschrijving": value.abstract,
             "documentatie_urls": {},
             "licentie": "N/A",
-            "naam": value.title,
+            "naam": displayTitle,
             "specificatie_urls": {},
         });
     }

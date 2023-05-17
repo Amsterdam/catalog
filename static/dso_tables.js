@@ -2,13 +2,14 @@
  * Fill the api table from "https://api.data.amsterdam.nl/v1/"
  */
 
- const domain = window.location.origin;
- const dsoPath = "/v1/";
- let tables = {
+const domain = window.location.origin;
+const dsoPath = "/v1/";
+const mapDomain = "https://map.data.amsterdam.nl";
+let tables = {
     "rest_apis": [],
     "geo_services": [],
     "tile_services": []
- }
+}
 
  function JSONRequest(url) {
     return new Promise(function(callback, err) {
@@ -31,6 +32,27 @@
         }; 
     }); 
  }
+
+
+// Convert index.json from map.data.amsterdam.nl. See tools/make_indexjson.py
+// over at https://github.com/Amsterdam/mapserver.
+function parseMapIndex(mapidx) {
+    let geo = tables["geo_services"];
+    for (const [key, value] of Object.entries(mapidx)) {
+        geo.push({
+            "api_urls": {
+                "WFS": mapDomain + "/maps/" + key + "?REQUEST=GetCapabilities&SERVICE=wfs",
+                "WMS": mapDomain + "/maps/" + key + "?REQUEST=GetCapabilities&VERSION=1.1.0&SERVICE=wms",
+            },
+            "beschikbaarheid": "Openbaar",
+            "beschrijving": value.abstract,
+            "documentatie_urls": {},
+            "licentie": "N/A",
+            "naam": value.title,
+            "specificatie_urls": {},
+        });
+    }
+}
 
 
  function parseManualApisJson(json) {
@@ -133,7 +155,10 @@
  
  window.onload = () => {
     let promises = [
-        JSONRequest("/api/manual_apis.json").catch(e => {console.log("Kan manual datasets niet ophalen.")}),
+        JSONRequest("/manual_apis.json").catch(e => {console.log("Kan manual datasets niet ophalen.")}),
+        JSONRequest(mapDomain + "/maps/index.json").catch(e => {
+            console.log("Kan index van " + mapDomain + " niet ophalen.");
+        }),
         JSONRequest(domain + dsoPath + "?_format=json").catch(e => {console.log("Kan datasets niet ophalen.")}),
         JSONRequest(domain + dsoPath + "wfs/").catch(e => {console.log("Kan mvt datasets niet ophalen.")}),
         JSONRequest(domain + dsoPath + "mvt/").catch(e => {console.log("Kan wfs datasets niet ophalen.")})
@@ -142,6 +167,7 @@
     Promise.all(promises).then((results) => {
         let resultHandlers = [
             parseManualApisJson, 
+            parseMapIndex,
             (res) => parseDSOjson(res, tables.rest_apis),
             (res) => parseDSOjson(res, tables.geo_services, "WFS"),
             (res) => parseDSOjson(res, tables.tile_services, "MVT")

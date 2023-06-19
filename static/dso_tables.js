@@ -161,7 +161,7 @@ function parseMapIndex(mapidx) {
  
  window.onload = () => {
     let promises = [
-        JSONRequest("/manual_apis.json").catch(e => {console.log("Kan manual datasets niet ophalen.")}),
+        JSONRequest("manual_apis.json").catch(e => {console.log("Kan manual datasets niet ophalen.")}),
         JSONRequest(mapDomain + "/maps/index.json").catch(e => {
             console.log("Kan index van " + mapDomain + " niet ophalen.");
         }),

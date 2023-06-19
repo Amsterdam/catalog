@@ -64,7 +64,7 @@ function parseMapIndex(mapidx) {
  function parseManualApisJson(json) {
      for(let table of Object.keys(tables)) {
          if(tables.hasOwnProperty(table)){
-             tables[table] = json.tables[table];
+             tables[table] = json.tables[table] || [];
          }
      }
  }

@@ -1,5 +1,5 @@
 # webserver image.
-FROM nginx:1.21
+FROM nginx:stable
 MAINTAINER datapunt.ois@amsterdam.nl
 
 ENV BASE_URL=https://api.data.amsterdam.nl/

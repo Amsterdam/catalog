@@ -11,7 +11,7 @@ then
     echo "Converting t1.data.amsterdam.nl to acc.t1.map.data.amsterdam.nl"
     sed -i -e"s;\(https://\)\(.*t1.data.amsterdam.nl\)\(.*\);\1acc.t1.data.amsterdam.nl\3;" /usr/share/nginx/html/index.html
     echo "Converting api.data.amsterdam.nl to acc.api.map.data.amsterdam.nl"
-    sed -i -e"s;\(https://\)\(.*api.data.amsterdam.nl\)\(.*\);\1acc.api.data.amsterdam.nl\3;" /usr/share/nginx/html/index.html
+    sed -i -e"s;\(https://\)\([^.]*api.data.amsterdam.nl\)\(.*\);\1acc.api.data.amsterdam.nl\3;" /usr/share/nginx/html/index.html
 fi
 
 echo "Converting %BASE_URL% to ${BASE_URL}"

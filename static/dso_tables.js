@@ -47,7 +47,6 @@ function parseMapIndex(mapidx) {
 
         geo.push({
             "api_urls": {
-                "WFS": mapDomain + "/maps/" + key + "?REQUEST=GetCapabilities&SERVICE=wfs",
                 "WMS": mapDomain + "/maps/" + key + "?REQUEST=GetCapabilities&VERSION=1.1.0&SERVICE=wms",
             },
             "beschikbaarheid": "Openbaar",

@@ -148,11 +148,7 @@ function parseMapIndex(mapidx) {
                 '<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">' +
                 '<img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png"' + 
                 ' width="88" height="31"/></a>';
-        }  else {
-            cell6_Licentie.innerHTML = 
-                '<a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">' +
-                '<img src="https://i.creativecommons.org/p/zero/1.0/88x31.png" width="88" height="31" alt="Creative Commons License"/></a>';
-        }      
+        }
     });
     statusRow.remove();
  }

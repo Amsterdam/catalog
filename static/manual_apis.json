@@ -10,7 +10,8 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0"
+                "licentie": "CC0",
+                "legacy":true
             },
             {
                 "naam": "Basisregistratie Kadaster (BRK)",
@@ -32,7 +33,8 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0"
+                "licentie": "CC0",
+                "legacy": true
             },
             {
                 "naam": "Geosearch",
@@ -65,7 +67,8 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Alleen bereikbaar binnen de gemeente",
                 "beschrijving": null,
-                "licentie": "CC0"
+                "licentie": "CC0",
+                "legacy": true
             },
             {
                 "naam": "Meldingen / Signalen",
@@ -125,7 +128,8 @@
                 "documentatie_urls": {"redoc":"/tellus/redoc/"},
                 "beschikbaarheid": "Gedeeltelijk publiek",
                 "beschrijving": null,
-                "licentie": "CC0"
+                "licentie": "CC0",
+                "legacy":true
             },
             {
                 "naam": "Typeahead",
@@ -134,7 +138,8 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0"
+                "licentie": "CC0",
+                "legacy":true
             },
             {
                 "naam": "Typeahead Bag/Brk",
@@ -145,7 +150,8 @@
                 "documentatie_urls": {},
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
-                "licentie": "CC0"
+                "licentie": "CC0",
+                "legacy": true
             },
             {
                 "naam": "WBAKaart (blackspots)",

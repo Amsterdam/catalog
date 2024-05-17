@@ -176,7 +176,7 @@
                 },
                 "specificatie_urls": {},
                 "documentatie_urls": {},
-                "beschrijving": "Raster,  coordinaten stelsel: Rijksdriehoekstelsel (5-16)",
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
                 "beschikbaarheid": "Openbaar",
                 "licentie": "CC0"
             },
@@ -188,7 +188,7 @@
                 },
                 "specificatie_urls": {},
                 "documentatie_urls": {},
-                "beschrijving": "Raster,  coordinaten stelsel: Rijksdriehoekstelsel (5-16)",
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
                 "beschikbaarheid": "Openbaar",
                 "licentie": "CC0"
             },
@@ -200,7 +200,7 @@
                 },
                 "specificatie_urls": {},
                 "documentatie_urls": {},
-                "beschrijving": "Raster,  coordinaten stelsel: Rijksdriehoekstelsel (5-16)",
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
                 "beschikbaarheid": "Openbaar",
                 "licentie": "CC0"
             },
@@ -210,9 +210,11 @@
                     "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
                     "Tiles": "https://t1.data.amsterdam.nl/topo_wm/18/134599/86112.png"
                 },
-                "specificatie_urls": {},
+                "specificatie_urls": {
+                    "TileJSON": "https://t1.data.amsterdam.nl/topo_wm/tilejson.json"
+                },
                 "documentatie_urls": {},
-                "beschrijving": "Raster,  coordinaten stelsel: Webmercator/Google (11-21)",
+                "beschrijving": "Raster, coördinatenstelsel: Web Mercator/Google (11-21)",
                 "beschikbaarheid": "Openbaar",
                 "licentie": "CC0"
             },
@@ -222,21 +224,25 @@
                     "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
                     "Tiles": "https://t1.data.amsterdam.nl/topo_wm_light/18/134599/86112.png"
                 },
-                "specificatie_urls": {},
+                "specificatie_urls": {
+                    "TileJSON": "https://t1.data.amsterdam.nl/topo_wm_light/tilejson.json"
+                },
                 "documentatie_urls": {},
-                "beschrijving": "Raster,  coordinaten stelsel: Webmercator/Google (11-21)",
+                "beschrijving": "Raster, coördinatenstelsel: Web Mercator/Google (11-21)",
                 "beschikbaarheid": "Openbaar",
                 "licentie": "CC0"
             },
             {
-                "naam": "Topografie, zwart-wit visualisatie(WM)",
+                "naam": "Topografie, zwart-wit visualisatie (WM)",
                 "api_urls": {
                     "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
                     "Tiles": "https://t1.data.amsterdam.nl/topo_wm_zw/18/134599/86112.png"
                 },
-                "specificatie_urls": {},
+                "specificatie_urls": {
+                    "TileJSON": "https://t1.data.amsterdam.nl/topo_wm_zw/tilejson.json"
+                },
                 "documentatie_urls": {},
-                "beschrijving": "Raster,  coordinaten stelsel: Webmercator/Google (11-21)",
+                "beschrijving": "Raster, coördinatenstelsel: Web Mercator/Google (11-21)",
                 "beschikbaarheid": "Openbaar",
                 "licentie": "CC0"
             },
@@ -244,11 +250,251 @@
                 "naam": "Luchtfoto (RD)",
                 "api_urls": {
                     "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2023_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2022 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2022_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2021 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
                     "Tiles": "https://t1.data.amsterdam.nl/lufo2021_RD/12/1891/2161.jpeg"
                 },
                 "specificatie_urls": {},
                 "documentatie_urls": {},
-                "beschrijving": "Raster,  coordinaten stelsel: Rijksdriehoekstelsel (5-16)",
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2020 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2020_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2019 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2019_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2018 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2018_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2017 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2017_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2016 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2016_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2015 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2015_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2014 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2014_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2013 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2013_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2012 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2012_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2011 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2011_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2010 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2010_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2009 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2009_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2008 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2008_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2007 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2007_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2006 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2006_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2005 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2005_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2004 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2004_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Luchtfoto 2003 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2003_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
                 "beschikbaarheid": "Openbaar",
                 "licentie": "CC0"
             },
@@ -256,13 +502,13 @@
                 "naam": "Luchtfoto (WM)",
                 "api_urls": {
                     "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
-                    "Tiles": "https://t1.data.amsterdam.nl/lufo2021_WM/18/134599/86112.png"
+                    "Tiles": "https://t1.data.amsterdam.nl/lufo2023_WM/18/134599/86112.jpeg"
                 },
                 "specificatie_urls": {
-                    "TileJSON": "https://t1.data.amsterdam.nl/lufo2021_WM/tilejson.json"
+                    "TileJSON": "https://t1.data.amsterdam.nl/lufo2023_WM/tilejson.json"
                 },
                 "documentatie_urls": {},
-                "beschrijving": "Raster,  coordinaten stelsel: Webmercator/Google (11-21)",
+                "beschrijving": "Raster, coördinatenstelsel: Web Mercator/Google (11-21)",
                 "beschikbaarheid": "Openbaar",
                 "licentie": "CC0"
             },
@@ -270,11 +516,59 @@
                 "naam": "Infrarood (RD)",
                 "api_urls": {
                     "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/infrarood2023_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Infrarood 2022 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/infrarood2022_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Infrarood 2021 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
                     "Tiles": "https://t1.data.amsterdam.nl/infrarood2021_RD/12/1891/2161.jpeg"
                 },
                 "specificatie_urls": {},
                 "documentatie_urls": {},
-                "beschrijving": "Raster,  coordinaten stelsel: Rijksdriehoekstelsel (5-16)",
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Infrarood 2020 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/infrarood2020_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
+                "beschikbaarheid": "Openbaar",
+                "licentie": "CC0"
+            },
+            {
+                "naam": "Infrarood 2018 (RD)",
+                "api_urls": {
+                    "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
+                    "Tiles": "https://t1.data.amsterdam.nl/infrarood2018_RD/12/1891/2161.jpeg"
+                },
+                "specificatie_urls": {},
+                "documentatie_urls": {},
+                "beschrijving": "Raster, coördinatenstelsel: Rijksdriehoekstelsel (5-16)",
                 "beschikbaarheid": "Openbaar",
                 "licentie": "CC0"
             },
@@ -282,13 +576,13 @@
                 "naam": "Infrarood (WM)",
                 "api_urls": {
                     "WMTS": "https://map.data.amsterdam.nl/service?REQUEST=GetCapabilities&SERVICE=WMTS",
-                    "Tiles": "https://t1.data.amsterdam.nl/infrarood2021_WM/18/134599/86112.png"
+                    "Tiles": "https://t1.data.amsterdam.nl/infrarood2023_WM/18/134599/86112.jpeg"
                 },
                 "specificatie_urls": {
-                    "TileJSON": "https://t1.data.amsterdam.nl/infrarood2021_WM/tilejson.json"
+                    "TileJSON": "https://t1.data.amsterdam.nl/infrarood2023_WM/tilejson.json"
                 },
                 "documentatie_urls": {},
-                "beschrijving": "Raster,  coordinaten stelsel: Webmercator/Google (11-21)",
+                "beschrijving": "Raster, coördinatenstelsel: Web Mercator/Google (11-21)",
                 "beschikbaarheid": "Openbaar",
                 "licentie": "CC0"
             }

@@ -1,7 +1,7 @@
 {
   "name": "catalog",
   "version": "1.0.0",
-  "description": "List of DataPunt APIs along with browsable API, documentation and more.",
+  "description": "List of Dataplatform APIs along with browsable API, documentation and more.",
   "main": "index.js",
   "scripts": {
     "postinstall": "copy-files-from-to"

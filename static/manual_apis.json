@@ -2,41 +2,6 @@
     "tables": {
         "rest_apis": [
             {
-                "naam": "BAG Search",
-                "api_urls": {
-                    "Rest API": "/atlas/search"
-                },
-                "specificatie_urls":{"Swagger":"/api/swagger/?url=/bag/docs/api-docs/search%3Fformat%3Dopenapi"},
-                "documentatie_urls": {},
-                "beschikbaarheid": "Openbaar",
-                "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true
-            },
-            {
-                "naam": "Basisregistratie Kadaster (BRK)",
-                "api_urls": {
-                    "Rest API": "/brk"
-                },
-                "specificatie_urls":{"Swagger":"/api/swagger/?url=/bag/docs/api-docs/brk%3Fformat%3Dopenapi"},
-                "documentatie_urls": {},
-                "beschikbaarheid": "Alleen bereikbaar binnen de gemeente",
-                "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy":"/v1/brk"
-            },
-            {
-                "naam": "Datasetcatalogus (dcatd)",
-                "api_urls": {},
-                "specificatie_urls":{"Swagger":"/api/swagger/?url=/dcatd/openapi"},
-                "documentatie_urls": {},
-                "beschikbaarheid": "Openbaar",
-                "beschrijving": null,
-                "licentie": "CC0",
-                "legacy": true
-            },
-            {
                 "naam": "Geosearch",
                 "api_urls": {},
                 "specificatie_urls":{"Swagger":"/api/swagger/?url=/geosearch/docs/geosearch.yml"},
@@ -44,69 +9,6 @@
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
                 "licentie": "CC0"
-            },
-            {
-                "naam": "Handelsregister",
-                "api_urls": {
-                    "Rest API": "/handelsregister"
-                },
-                "specificatie_urls":{"Swagger":"/api/swagger/?url=/handelsregister/docs/api-docs/%3Fformat%3Dopenapi"},
-                "documentatie_urls": {},
-                "beschikbaarheid": "Alleen bereikbaar binnen de gemeente",
-                "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy":"/v1/handelsregister"
-            },
-            {
-                "naam": "IIIF bouwdossiers metadata",
-                "api_urls": {
-                    "Rest API": "/iiif-metadata/bouwdossier"
-                },
-                "specificatie_urls":{"Swagger":"/api/swagger/?url=/iiif-metadata/docs/swagger.yaml"},
-                "documentatie_urls": {},
-                "beschikbaarheid": "Alleen bereikbaar binnen de gemeente",
-                "beschrijving": null,
-                "licentie": "CC0",
-                "legacy": true
-            },
-            {
-                "naam": "Meldingen / Signalen",
-                "api_urls": {
-                    "Rest API": "/signals"
-                },
-                "specificatie_urls":{"Swagger":"/api/swagger/?url=/signals/swagger/openapi.yaml"},
-                "documentatie_urls": {},
-                "beschikbaarheid": "Openbaar",
-                "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy":"/v1/meldingen"
-            },
-            {
-                "naam": "Monumenten",
-                "api_urls": {
-                    "Rest API": "/monumenten"
-                },
-                "specificatie_urls":{"Swagger":"/api/swagger/?url=/monumenten/docs/api-docs/monumenten/%3Fformat%3Dopenapi"},
-                "documentatie_urls": {},
-                "beschikbaarheid": "Openbaar",
-                "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true
-            },
-            {
-                "naam": "NAP Peilmerken",
-                "api_urls": {
-                    "Rest API": "/nap"
-                },
-                "specificatie_urls":{"Swagger":"/api/swagger/?url=/meetbouten/docs/api-docs/nap%3Fformat%3Dopenapi"},
-                "documentatie_urls": {},
-                "beschikbaarheid": "Openbaar",
-                "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy": "/v1/nap"
             },
             {
                 "naam": "Panoramabeelden Amsterdam",
@@ -118,53 +20,6 @@
                 "beschikbaarheid": "Openbaar",
                 "beschrijving": null,
                 "licentie": "CCby4.0"
-            },
-            {
-                "naam": "Tellus",
-                "api_urls": {
-                    "Rest API": "/tellus"
-                },
-                "specificatie_urls":{"Swagger":"/api/swagger/?url=/tellus/swagger.yaml"},
-                "documentatie_urls": {"redoc":"/tellus/redoc/"},
-                "beschikbaarheid": "Gedeeltelijk publiek",
-                "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true
-            },
-            {
-                "naam": "Typeahead",
-                "api_urls": {},
-                "specificatie_urls":{"Swagger":"/api/swagger/?url=/typeahead/openapi"},
-                "documentatie_urls": {},
-                "beschikbaarheid": "Openbaar",
-                "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true
-            },
-            {
-                "naam": "Typeahead Bag/Brk",
-                "api_urls": {
-                    "Rest API": "/atlas/typeahead"
-                },
-                "specificatie_urls":{"Swagger":"/api/swagger/?url=/bag/docs/api-docs/typeahead%3Fformat%3Dopenapi"},
-                "documentatie_urls": {},
-                "beschikbaarheid": "Openbaar",
-                "beschrijving": null,
-                "licentie": "CC0",
-                "legacy": true
-            },
-            {
-                "naam": "WBAKaart (blackspots)",
-                "api_urls": {
-                    "Rest API": "/blackspots"
-                },
-                "specificatie_urls":{"Swagger":"/api/swagger/?url=/blackspots/swagger.yaml"},
-                "documentatie_urls": {"redoc":"/blackspots/redoc/"},
-                "beschikbaarheid": "Alleen bereikbaar binnen de gemeente",
-                "beschrijving": null,
-                "licentie": "CC0",
-                "legacy":true,
-                "replacedBy":"/v1/blackspots"
             }
         ],
         "tile_services": [

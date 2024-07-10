@@ -3,7 +3,8 @@
  * and https://map.data.amsterdam.nl/index.json.
  */
 
-const domain = window.location.origin;
+//const domain = window.location.origin;
+const domain = "https://api.data.amsterdam.nl";
 const dsoPath = "/v1/";
 const mapDomain = "https://map.data.amsterdam.nl";
 let tables = {
@@ -74,6 +75,8 @@ function parseMapIndex(mapidx) {
         let dataset = json.datasets[name];
         if(dataset.status == "beschikbaar" && dataset.environments.length){
             row = {
+                "base_url": dataset.environments[0].specification_url,
+                "short_name": dataset.short_name,
                 "naam": dataset.service_name,
                 "beschrijving":dataset.description,
                 "api_urls": {},
@@ -100,14 +103,23 @@ function parseMapIndex(mapidx) {
     sortedApis.forEach((api, i) => {
         let row = table.insertRow(-1);
         row.id = tableId + "-row-" + i;
-
+        let base_url = api.base_url;
+        
         if(api.legacy === true) {
             row.className = "legacy"
         }
 
         // Title column
+
         let cell1_Naam = row.insertCell(0);
         cell1_Naam.innerHTML = api.naam;
+
+        if(base_url) {
+          if (base_url.indexOf('mvt') === -1 && base_url.indexOf('wms') === -1 && base_url.indexOf('wfs') === -1) {
+            cell1_Naam.innerHTML += "<div class='icon-status-none' id='" + api.short_name + "_status'></div>";
+          }
+        }
+
         if(api.beschrijving) {
             cell1_Naam.title = api.beschrijving;
             cell1_Naam.innerHTML += "<div class='info-icon' title='" + api.beschrijving + "'>?</div>";
@@ -125,7 +137,7 @@ function parseMapIndex(mapidx) {
         // Documentation column
         let cell4_Docs = row.insertCell(2);
         for ( let urlName of Object.keys(api.documentatie_urls)) {
-            cell4_Docs.innerHTML = '<a title="' + urlName + ' documentatie" href="' + api.documentatie_urls[urlName] + '">' + urlName + '</a> ';
+            cell4_Docs.innerHTML = '<a title="' + urlName + ' documentatie" href="' + api.documentatie_urls[urlName] + '">' + urlName + '</a>';
         }
 
         // Status column
@@ -153,7 +165,6 @@ function parseMapIndex(mapidx) {
     statusRow.remove();
  }
 
- 
  window.onload = () => {
     let promises = [
         JSONRequest("manual_apis.json").catch(e => {console.log("Kan manual datasets niet ophalen.")}),
@@ -219,3 +230,55 @@ function clearSearch() {
         searchContainers[i].children.namedItem("query").value = "";
     } 
 }
+
+  window.addEventListener('load', async function() {
+      //sleep 3 seconds 
+      await new Promise(r => setTimeout(r, 3000));
+      try {
+          // 1. Get the initial API data
+          let apiUrls = [];
+          const response = await fetch(`${domain}${dsoPath}?_format=json`);
+          const data = await response.json();
+          
+          for(const dataset in data.datasets) {
+            apiUrls.push([data.datasets[dataset].short_name,data.datasets[dataset].environments[0].api_url]);
+          }
+
+          // 2. Loop over API URLs      
+          for (const apiUrl of apiUrls) {
+            try {
+                  const apiResponse = await fetch(apiUrl[1]);
+                  const apiData = await apiResponse.json();
+                  const apiName = apiUrl[0];
+                  const iconDiv = document.getElementById(`${apiName}_status`);
+                  
+                  let paths = Object.keys(apiData.paths);
+                  paths = paths.filter(path => !path.includes('{'));
+                  
+                  const fullPaths = paths.map(path => `${domain}${path}?_pageSize=1`);
+
+                  for (const path of fullPaths) {
+                    try {
+                        const pathResponse = await fetch(path);
+                        const isValid = pathResponse.status === 200 || pathResponse.status === 403;
+                        if (isValid) {
+                          iconDiv.className = "icon-status-green";
+                        } else {
+                          iconDiv.className = "icon-status-red";
+                          break;
+                        }
+                        
+                    } catch (error) {
+                        console.log(`${path}: false (Error: ${error.message})`);
+                        iconDiv.className = "icon-status-red";
+                    }
+                  }
+              } catch (error) {
+                  console.error(`Error processing ${apiUrl}: ${error.message}`);
+    
+              }
+          }
+      } catch (error) {
+          console.error(`Error fetching initial data: ${error.message}`);
+      }
+  });

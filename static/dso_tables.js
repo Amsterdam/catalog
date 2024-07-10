@@ -3,8 +3,7 @@
  * and https://map.data.amsterdam.nl/index.json.
  */
 
-//const domain = window.location.origin;
-const domain = "https://api.data.amsterdam.nl";
+const domain = window.location.origin;
 const dsoPath = "/v1/";
 const mapDomain = "https://map.data.amsterdam.nl";
 let tables = {

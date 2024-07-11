@@ -78,7 +78,7 @@ tbody img {
 }
 
 .column1 {
-    width: 30%;
+    width: 35%;
 }
 .column2 {
     width: 10%;
@@ -90,7 +90,7 @@ tbody img {
     width: 10%;
 }
 .column5 {
-    width: 30%;
+    width: 25%;
 }
 .column6 {
     width: 10%;
@@ -98,9 +98,7 @@ tbody img {
 
 .info-icon, .lock-icon {
     border-radius: 50%;
-    border-color: rgb(204, 204, 204);
-    border-width: 3px;
-    border-style: solid;
+    border: 1px solid rgb(204, 204, 204);
     width: 1.3em;
     height: 1.2em;
     text-align: center;
@@ -113,6 +111,56 @@ tbody img {
     float: inline-end;
     color: rgb(204, 159, 11);
 
+}
+
+.icon-status-green {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: green;
+    border-radius: 50%;
+    float: inline-end;
+    text-align: center;
+    margin-top: 1px;
+    margin-left: 3px;
+    margin-right: 3px;
+    
+}
+
+.icon-status-orange {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: orange;
+    border-radius: 50%;
+    float: inline-end;
+    text-align: center;
+    margin-top: 1px;
+    margin-left: 3px;
+    margin-right: 3px;
+    
+}
+
+.icon-status-red {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: red;
+    border-radius: 50%;
+    float: inline-end;
+    text-align: center;
+    margin-top: 1px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.icon-status-none {
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  float: inline-end;
+  text-align: center;
+  margin-top: 1px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 td:hover .info-icon, .lock-icon:hover {
     border-color: rgb(155, 155, 155);

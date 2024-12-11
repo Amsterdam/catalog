@@ -1,5 +1,5 @@
 # webserver image.
-FROM nginxinc/nginx-unprivileged:stable
+FROM nginxinc/nginx-unprivileged:stable-bullseye
 MAINTAINER datapunt.ois@amsterdam.nl
 
 ENV BASE_URL=https://api.data.amsterdam.nl/

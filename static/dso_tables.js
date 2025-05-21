@@ -254,7 +254,7 @@ function clearSearch() {
                   let paths = Object.keys(apiData.paths);
                   paths = paths.filter(path => !path.includes('{'));
                   
-                  const fullPaths = paths.map(path => `${domain}${path}?_pageSize=1`);
+                  const fullPaths = paths.map(path => `${apiUrl[1]}${path}?_pageSize=1`);
 
                   for (const path of fullPaths) {
                     try {

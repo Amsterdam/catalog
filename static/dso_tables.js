@@ -30,8 +30,8 @@ let tables = {
                     err(this.response);
                 }
             }
-        }; 
-    }); 
+        };
+    });
  }
 
 
@@ -72,24 +72,24 @@ function parseMapIndex(mapidx) {
  function parseDSOjson(json, table, api_name="Rest API") {
     for ( let name of Object.keys(json.datasets)) {
         let dataset = json.datasets[name];
-        if(dataset.status == "beschikbaar" && dataset.environments.length){
+        if(dataset.status == "beschikbaar" && dataset.versions.length){
             row = {
-                "base_url": dataset.environments[0].specification_url,
+                "base_url": dataset.versions[0].api_url,
                 "short_name": dataset.short_name,
                 "naam": dataset.service_name,
                 "beschrijving":dataset.description,
                 "api_urls": {},
-                "documentatie_urls": {"ReadTheDocs": dataset.environments[0].documentation_url},
+                "documentatie_urls": {"ReadTheDocs": dataset.versions[0].doc_url},
                 "beschikbaarheid": dataset.terms_of_use.government_only?"Beperkt toegankelijk":"Openbaar",
                 "licentie": "CC0"
             };
             if(dataset.terms_of_use.license == "Creative Commons, Naamsvermelding") {
                 row["licentie"] = "CCBy4.0";
             }
-            row.api_urls[api_name] = dataset.environments[0].api_url;
+            row.api_urls[api_name] = dataset.versions[0].api_url;
             table[table.length] = row;
         }
-    } 
+    }
  }
 
  function makeTable(tableId, data){
@@ -98,12 +98,12 @@ function parseMapIndex(mapidx) {
 
     // Legacy API's last
     sortedApis = data.sort((a,b) => a.hasOwnProperty("legacy"))
-    
+
     sortedApis.forEach((api, i) => {
         let row = table.insertRow(-1);
         row.id = tableId + "-row-" + i;
         let base_url = api.base_url;
-        
+
         if(api.legacy === true) {
             row.className = "legacy"
         }
@@ -145,10 +145,10 @@ function parseMapIndex(mapidx) {
 
         if(api.legacy === true) {
             cell5_Status.innerHTML = "Legacy API <b>Niet gebruiken</b>, wordt <b>verwijderd</b>"
-            
+
             if(api.replacedBy)  {
                 cell5_Status.innerHTML += " Vervangende API: <a href='" + api.replacedBy + "'>" + api.replacedBy + '</a> ';
-            }  
+            }
             cell5_Status.innerHTML += " </br><a href=#legacy-info>Meer informatie</a>"
         }
 
@@ -157,7 +157,7 @@ function parseMapIndex(mapidx) {
         if(api.licentie == "CCBy4.0") {
             cell6_Licentie.innerHTML =
                 '<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">' +
-                '<img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png"' + 
+                '<img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png"' +
                 ' width="88" height="31"/></a>';
         }
     });
@@ -171,13 +171,13 @@ function parseMapIndex(mapidx) {
             console.log("Kan index van " + mapDomain + " niet ophalen.");
         }),
         JSONRequest(domain + dsoPath + "?_format=json").catch(e => {console.log("Kan datasets niet ophalen.")}),
-        JSONRequest(domain + dsoPath + "wfs/").catch(e => {console.log("Kan mvt datasets niet ophalen.")}),
-        JSONRequest(domain + dsoPath + "mvt/").catch(e => {console.log("Kan wfs datasets niet ophalen.")})
+        JSONRequest(domain + dsoPath + "wfs/").catch(e => {console.log("Kan wfs datasets niet ophalen.")}),
+        JSONRequest(domain + dsoPath + "mvt/").catch(e => {console.log("Kan mvt datasets niet ophalen.")})
     ]
     clearSearch();
     Promise.all(promises).then((results) => {
         let resultHandlers = [
-            parseManualApisJson, 
+            parseManualApisJson,
             parseMapIndex,
             (res) => parseDSOjson(res, tables.rest_apis),
             (res) => parseDSOjson(res, tables.geo_services, "WFS"),
@@ -214,7 +214,7 @@ function search(inputId) {
     }
     for (let i = 0; i < searchContainers.length; i++) {
         searchContainers[i].classList.add("active");
-    } 
+    }
 }
 
 
@@ -227,33 +227,33 @@ function clearSearch() {
     for (let i = 0; i < searchContainers.length; i++) {
         searchContainers[i].classList.remove("active");
         searchContainers[i].children.namedItem("query").value = "";
-    } 
+    }
 }
 
   window.addEventListener('load', async function() {
-      //sleep 3 seconds 
+      //sleep 3 seconds
       await new Promise(r => setTimeout(r, 3000));
       try {
           // 1. Get the initial API data
           let apiUrls = [];
           const response = await fetch(`${domain}${dsoPath}?_format=json`);
           const data = await response.json();
-          
+
           for(const dataset in data.datasets) {
-            apiUrls.push([data.datasets[dataset].short_name,data.datasets[dataset].environments[0].api_url]);
+            apiUrls.push([data.datasets[dataset].short_name,data.datasets[dataset].versions[0].api_url]);
           }
 
-          // 2. Loop over API URLs      
+          // 2. Loop over API URLs
           for (const apiUrl of apiUrls) {
             try {
                   const apiResponse = await fetch(apiUrl[1]);
                   const apiData = await apiResponse.json();
                   const apiName = apiUrl[0];
                   const iconDiv = document.getElementById(`${apiName}_status`);
-                  
+
                   let paths = Object.keys(apiData.paths);
                   paths = paths.filter(path => !path.includes('{'));
-                  
+
                   const fullPaths = paths.map(path => `${apiUrl[1]}${path}?_pageSize=1`);
 
                   for (const path of fullPaths) {
@@ -266,7 +266,7 @@ function clearSearch() {
                           iconDiv.className = "icon-status-red";
                           break;
                         }
-                        
+
                     } catch (error) {
                         console.log(`${path}: false (Error: ${error.message})`);
                         iconDiv.className = "icon-status-red";
@@ -274,7 +274,7 @@ function clearSearch() {
                   }
               } catch (error) {
                   console.error(`Error processing ${apiUrl}: ${error.message}`);
-    
+
               }
           }
       } catch (error) {

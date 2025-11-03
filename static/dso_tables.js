@@ -70,11 +70,17 @@ function parseManualApisJson(json) {
 }
 
 function parseDSOjson(json, table, api_name = "Rest API") {
+    const apiNameToProp = {
+        "Rest API": "api_url",
+        WFS: "wfs_url",
+        MVT: "mvt_url",
+    }
+    const urlProp = apiNameToProp[api_name]
     for (let name of Object.keys(json.datasets)) {
         let dataset = json.datasets[name]
         if (dataset.status == "beschikbaar" && dataset.versions.length) {
             row = {
-                base_url: dataset.versions[0].api_url,
+                base_url: dataset.versions[0][urlProp],
                 short_name: dataset.short_name,
                 naam: dataset.service_name,
                 beschrijving: dataset.description,
@@ -91,7 +97,7 @@ function parseDSOjson(json, table, api_name = "Rest API") {
             ) {
                 row["licentie"] = "CCBy4.0"
             }
-            row.api_urls[api_name] = dataset.versions[0].api_url
+            row.api_urls[api_name] = dataset.versions[0][urlProp]
             table[table.length] = row
         }
     }

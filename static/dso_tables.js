@@ -78,14 +78,15 @@ function parseDSOjson(json, table, api_name = "Rest API") {
     const urlProp = apiNameToProp[api_name]
     for (let name of Object.keys(json.datasets)) {
         let dataset = json.datasets[name]
-        if (dataset.status == "beschikbaar" && dataset.versions.length) {
+        let stableVersions = dataset.versions.filter(ds => ds.status == "stabiel")
+        if (stableVersions.length) {
             row = {
-                base_url: dataset.versions[0][urlProp],
+                base_url: stableVersions[0][urlProp],
                 short_name: dataset.short_name,
                 naam: dataset.service_name,
                 beschrijving: dataset.description,
                 api_urls: {},
-                documentatie_urls: { ReadTheDocs: dataset.versions[0].doc_url },
+                documentatie_urls: { ReadTheDocs: stableVersions[0].doc_url },
                 beschikbaarheid: dataset.terms_of_use.government_only
                     ? "Beperkt toegankelijk"
                     : "Openbaar",
@@ -97,7 +98,7 @@ function parseDSOjson(json, table, api_name = "Rest API") {
             ) {
                 row["licentie"] = "CCBy4.0"
             }
-            row.api_urls[api_name] = dataset.versions[0][urlProp]
+            row.api_urls[api_name] = stableVersions[0][urlProp]
             table[table.length] = row
         }
     }

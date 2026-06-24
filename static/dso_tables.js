@@ -79,6 +79,9 @@ function parseDSOjson(json, table, api_name = "Rest API") {
     for (let name of Object.keys(json.datasets)) {
         let dataset = json.datasets[name]
         let stableVersions = dataset.versions.filter(ds => ds.status == "stabiel")
+        if (!stableVersions.length) {
+            stableVersions = dataset.versions.filter(ds => ds.status == "in ontwikkeling")
+        }
         if (stableVersions.length) {
             row = {
                 base_url: stableVersions[0][urlProp],
